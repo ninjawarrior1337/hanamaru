@@ -30,8 +30,6 @@ class Play: Command() {
             audioManager.sendingHandler = LavaPlayerSendHandler(player)
 
             playerManager.loadItem(event.args, AudioLoadResultHandler(trackScheduler, event))
-
-            audioManager.
         }
     }
 }

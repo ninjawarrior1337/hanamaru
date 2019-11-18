@@ -15,5 +15,6 @@ class AudioPlayerManager: DefaultAudioPlayerManager()
     fun postConstruct() {
         AudioSourceManagers.registerLocalSource(this)
         AudioSourceManagers.registerRemoteSources(this)
+        this.frameBufferDuration = 400
     }
 }

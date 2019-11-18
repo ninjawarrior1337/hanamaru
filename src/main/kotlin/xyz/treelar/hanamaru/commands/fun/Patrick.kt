@@ -1,4 +1,4 @@
-package xyz.treelar.hanamaru.commands
+package xyz.treelar.hanamaru.commands.`fun`
 
 import com.jagrosh.jdautilities.command.Command
 import com.jagrosh.jdautilities.command.CommandEvent
