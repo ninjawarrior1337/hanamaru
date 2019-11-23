@@ -12,6 +12,9 @@ import xyz.treelar.hanamaru.lavaplayer.TrackSchedulerStore
 @Component
 class Leave : Command()
 {
+    init {
+        name = "leave"
+    }
     @Autowired
     lateinit var playerStore: PlayerStore
 

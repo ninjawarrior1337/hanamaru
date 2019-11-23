@@ -5,15 +5,15 @@ import net.dv8tion.jda.api.events.GenericEvent
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import net.dv8tion.jda.api.hooks.EventListener
 import org.springframework.stereotype.Component
+import xyz.treelar.hanamaru.baseclasses.HanamaruEventListener
 import java.awt.image.BufferedImage
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
 import javax.imageio.ImageIO
 
-
 @Component
-class MessageListener:  EventListener
+class MessageListener: EventListener
 {
     override fun onEvent(event: GenericEvent) {
         if(event is MessageReceivedEvent && !event.message.author.isBot) {

@@ -18,7 +18,8 @@ class Migrate : Command() {
         val executor = event.member
         if(!event.member.voiceState?.inVoiceChannel()!!) return event.reply("You must be in a voice channel")
         for (member in executor.voiceState?.channel?.members!!) {
-            gm.moveVoiceMember(member, event.jda.getVoiceChannelById(event.args))
+            gm.moveVoiceMember(member, event.jda.getVoiceChannelById(event.args)).queue()
         }
+        event.reply("Move complete")
     }
 }
