@@ -4,7 +4,7 @@ import net.dv8tion.jda.api.events.GenericEvent
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import net.dv8tion.jda.api.hooks.EventListener
 import org.springframework.stereotype.Component
-import xyz.treelar.hanamaru.sendAndQueue
+import xyz.treelar.hanamaru.baseclasses.sendAndQueue
 
 @Component
 class RemListener : EventListener

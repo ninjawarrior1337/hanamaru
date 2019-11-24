@@ -6,6 +6,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import net.dv8tion.jda.api.hooks.EventListener
 import org.springframework.stereotype.Component
 import xyz.treelar.hanamaru.baseclasses.HanamaruEventListener
+import java.awt.Image
 import java.awt.image.BufferedImage
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
@@ -24,11 +25,5 @@ class MessageListener: EventListener
 
     infix fun Message.reply(replyMessage: String) {
         this.channel.sendMessage(replyMessage).queue()
-    }
-
-    fun BufferedImage.asInputStream(): InputStream {
-        val os = ByteArrayOutputStream()
-        ImageIO.write(this, "png", os)
-        return ByteArrayInputStream(os.toByteArray())
     }
 }

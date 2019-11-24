@@ -1,4 +1,4 @@
-package xyz.treelar.hanamaru
+package xyz.treelar.hanamaru.baseclasses
 
 import net.dv8tion.jda.api.entities.MessageChannel
 

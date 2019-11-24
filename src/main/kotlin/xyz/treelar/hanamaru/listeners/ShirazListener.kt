@@ -29,7 +29,7 @@ class ShirazListener : EventListener {
     override fun onEvent(event: GenericEvent) {
         if(event is MessageReceivedEvent) {
             sor.findByIdOrNull(event.channel.idLong)?.let {
-                if(it.enableShiraz) {
+                if(it.options["enableShiraz"]?.toBoolean()!!) {
                     if (event.author.idLong == 212335473887019008) {
                         val matches = lt.check(event.message.contentStripped)
                         var finalSpellCorrectedMessage = event.message.contentRaw

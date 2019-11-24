@@ -19,14 +19,18 @@ class Config: Command() {
 
     override fun execute(event: CommandEvent) {
         val guildId = event.guild.idLong
+
+        val optionName = event.args.split(" ")[0]
+        val newValue = event.args.split(" ")[1]
+
         if(!serverOptionsRepo.existsById(guildId)) {
             serverOptionsRepo.save(ServerOptions(guildId))
         }
         val guildSettings = serverOptionsRepo.findByIdOrNull(guildId)
         if (guildSettings != null) {
-            guildSettings.enableShiraz = event.args!!.toBoolean()
+            guildSettings.options[optionName] = newValue
             serverOptionsRepo.save(guildSettings)
         }
-        event.reply("enableDio is now **${serverOptionsRepo.findByIdOrNull(guildId)?.enableShiraz}**")
+        event.reply("$optionName is now **${serverOptionsRepo.findByIdOrNull(guildId)?.options?.get(optionName)}**")
     }
 }

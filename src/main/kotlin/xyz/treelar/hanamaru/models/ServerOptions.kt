@@ -1,11 +1,10 @@
 package xyz.treelar.hanamaru.models
 
-import javax.persistence.Entity
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 data class ServerOptions(@Id val id: Long)
 {
-    var enableDio = true
-    var enableShiraz = false
+    @ElementCollection(fetch = FetchType.EAGER)
+    var options: MutableMap<String, String> = HashMap()
 }
