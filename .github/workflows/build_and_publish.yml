@@ -12,7 +12,7 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: ninjawarrior1337/hanamaru/hanamaru
-          username: ${{secrets.DOCKER_USERNAME}}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: $GITHUB_ACTOR
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
           workdir: build/docker
