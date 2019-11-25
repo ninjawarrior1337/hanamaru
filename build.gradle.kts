@@ -6,6 +6,8 @@ plugins {
 	kotlin("jvm") version "1.3.50"
 	kotlin("plugin.spring") version "1.3.50"
 	kotlin("plugin.jpa") version "1.3.50"
+
+	id("com.bmuschko.docker-spring-boot-application") version "6.0.0"
 }
 
 group = "xyz.treelar"
@@ -15,6 +17,15 @@ java.sourceCompatibility = JavaVersion.VERSION_1_8
 repositories {
 	mavenCentral()
 	jcenter()
+	gradlePluginPortal()
+}
+
+docker {
+	springBootApplication {
+		baseImage.set("openjdk:8-alpine")
+		jvmArgs.set(listOf("-Dspring.profiles.active=production", "-Xmx2048m"))
+		images.set(listOf("ninjawarrior1337/hanamaru/hanamaru:latest"))
+	}
 }
 
 val developmentOnly by configurations.creating
