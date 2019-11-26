@@ -1,5 +1,8 @@
 name: Build and Publish on Github Packages
-on: [push]
+on:
+  push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest

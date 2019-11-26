@@ -44,6 +44,7 @@ dependencies {
 	implementation("org.scilab.forge:jlatexmath:1.0.7")
 	implementation("com.atilika.kuromoji:kuromoji-ipadic:0.9.0")
 	implementation("com.andree-surya:moji4j:1.0.0")
+	implementation("io.github.cdimascio:java-dotenv:5.1.3")
 	implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
 
 	implementation("org.springframework.boot:spring-boot-starter-web")

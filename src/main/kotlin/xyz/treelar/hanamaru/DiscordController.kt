@@ -3,6 +3,7 @@ package xyz.treelar.hanamaru
 import com.jagrosh.jdautilities.command.Command
 import com.jagrosh.jdautilities.command.CommandClientBuilder
 import com.sedmelluq.discord.lavaplayer.jdaudp.NativeAudioSendFactory
+import io.github.cdimascio.dotenv.dotenv
 import net.dv8tion.jda.api.JDA
 import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.entities.Activity
@@ -16,7 +17,9 @@ import javax.annotation.PostConstruct
 
 @Component
 class DiscordController {
-    final val builder = JDABuilder("NTk5MTA1ODQ0ODA5ODI2MzA2.Xc9rNw.cIpCOwbrP--qau8d3lKIDegie7E")
+    final var dotenv = dotenv()
+
+    final val builder = JDABuilder(dotenv["TOKEN"])
     lateinit var jda: JDA
 
     @Autowired
