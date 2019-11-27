@@ -4,8 +4,8 @@ import net.dv8tion.jda.api.events.GenericEvent
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import net.dv8tion.jda.api.hooks.EventListener
 import org.springframework.stereotype.Component
-import xyz.treelar.hanamaru.commands.modtools.ServerInfo
-import xyz.treelar.hanamaru.commands.modtools.UserInfo
+import xyz.treelar.hanamaru.commands.utils.ServerInfo
+import xyz.treelar.hanamaru.commands.utils.UserInfo
 
 @Component
 class FrickYouJaxonsServer: EventListener

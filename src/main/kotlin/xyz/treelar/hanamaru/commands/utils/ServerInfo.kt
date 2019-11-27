@@ -1,4 +1,4 @@
-package xyz.treelar.hanamaru.commands.modtools
+package xyz.treelar.hanamaru.commands.utils
 
 import com.jagrosh.jdautilities.command.Command
 import com.jagrosh.jdautilities.command.CommandEvent

@@ -9,7 +9,6 @@ import org.languagetool.rules.spelling.SpellingCheckRule
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Component
-import xyz.treelar.hanamaru.baseclasses.HanamaruEventListener
 import xyz.treelar.hanamaru.repos.ServerOptionsRepo
 
 @Component
